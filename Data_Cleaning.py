@@ -1,22 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jun 10 23:16:18 2021
-
-@author: Vasileios Baltas
-"""
-
-
-
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
 
-
-
-df = pd.read_csv(r'C:\Users\Vasileios Baltas\Desktop\TimeSeries\Power_Usage_Prediction\household_power_consumption.txt', sep=';', header=0, low_memory=False, infer_datetime_format=True, parse_dates={'datetime':[0,1]}, index_col=['datetime'])
-
+df = pd.read_csv('household_power_consumption.txt', sep=';', header=0, low_memory=False, infer_datetime_format=True, parse_dates={'datetime':[0,1]}, index_col=['datetime'])
 
 
 #  The data was collected between December 2006 and November 2010 and contains observations of power consumption within the household were collected every minute.
@@ -47,14 +34,11 @@ def fill_missing(values):
 				values[row, col] = values[row - one_day, col]
                 
        
-        
          
 fill_missing(df.values)               
                 
 
-
-
-               
+           
 # The dataset provides the active power as well as some division of the active power by main circuit in the house, specifically the kitchen, laundry, and climate control.
 # These are not all the circuits in the household according to the official description of the dataset.
 # The remaining watt-hours can be calculated from the active energy by first converting the active energy to watt-hours,
@@ -73,14 +57,6 @@ df =  df.resample('D').sum()
 
 # We can now save the cleaned-up version of the dataset to a new file
 
-df.to_csv(r'C:\Users\Vasileios Baltas\Desktop\TimeSeries\Power_Usage_Prediction\final_power_consumption.csv')
-
-
-
-
-
-
-
-
+df.to_csv('final_power_consumption.csv')
 
  
