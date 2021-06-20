@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jun 20 22:07:15 2021
-
-@author: Vasileios Baltas
-"""
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -28,7 +21,7 @@ tf.compat.v1.keras.backend.set_session(sess)
 
 
 
-df = pd.read_csv(r'C:\Users\Vasileios Baltas\Desktop\TimeSeries\Power_Usage_Prediction\final_power_consumption.csv', header=0, infer_datetime_format=True, parse_dates=['datetime'], index_col=['datetime'])
+df = pd.read_csv('final_power_consumption.csv', header=0, infer_datetime_format=True, parse_dates=['datetime'], index_col=['datetime'])
 
 
 
@@ -128,9 +121,6 @@ def forecast_2(model, history, n_input):
 
 
 
-
-
-
 if  __name__ == '__main__':
     
       
@@ -148,10 +138,6 @@ if  __name__ == '__main__':
    plt.plot(days, scores_2, marker = 'o')
 
    plt.show()
-
-
-
-
 
 
 
