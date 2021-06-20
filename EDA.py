@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jun 10 23:46:25 2021
-
-@author: Vasileios Baltas
-"""
-
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -239,18 +231,5 @@ for i in range(len(months)):
 plt.show()
 
 # we can see that the distribution changes significantly depending on the month - from the 6th to the 9th month most values fall in the range of 1000-2000 kilowatts
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
