@@ -1,4 +1,4 @@
-In this repo, electricity power usage is analysed and forecasted by using the dataset given in this link:
+In this repo, electric power usage is analysed and forecasted by using the dataset given in this link:
 https://archive.ics.uci.edu/ml/datasets/individual+household+electric+power+consumption
 
 This data represents a multivariate time series of power-related variables that in turn could be used to model 
