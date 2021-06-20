@@ -3,6 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+# data can be found here in a .txt format:
+# https://archive.ics.uci.edu/ml/datasets/individual+household+electric+power+consumption
+
 df = pd.read_csv('household_power_consumption.txt', sep=';', header=0, low_memory=False, infer_datetime_format=True, parse_dates={'datetime':[0,1]}, index_col=['datetime'])
 
 
