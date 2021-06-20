@@ -5,7 +5,7 @@ import seaborn as sns
 
 
 
-df = pd.read_csv(r'C:\Users\Vasileios Baltas\Desktop\TimeSeries\Power_Usage_Prediction\final_power_consumption.csv', header=0, infer_datetime_format=True, parse_dates=['datetime'], index_col=['datetime'])
+df = pd.read_csv('final_power_consumption.csv', header=0, infer_datetime_format=True, parse_dates=['datetime'], index_col=['datetime'])
 
 print(df.info())
 
